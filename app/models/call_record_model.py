@@ -1,5 +1,5 @@
 from app.configs.database import db
-from sqlalchemy import Column, Integer, String, Date
+from sqlalchemy import Column, Integer, String, Date, DateTime
 from dataclasses import dataclass
 
 @dataclass
@@ -15,9 +15,10 @@ class CallRecord(db.Model):
     id = Column (Integer, primary_key = True)
     source = Column(Integer, nullable=False)
     destination = Column(String, nullable=False)
-    start_time = Column(Date)
-    end_time = Column(Date)
+    start_time = Column(DateTime)
+    end_time = Column(DateTime)
 
-    # def serializer(self):
-    #     return {"id":self.id, "source":self.source, 
-    #     "destination":self.destination, "start_time":self.start_time, "end_time": self.end_time}
+    # Function for serializer while dataclass off 
+    def serializer(self):
+        return {"id":self.id, "source":self.source, 
+        "destination":self.destination, "start_time":self.start_time, "end_time": self.end_time}
