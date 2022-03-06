@@ -1,8 +1,8 @@
-"""change start_time and end_time to DateTime
+"""create table
 
-Revision ID: 9efd93936ed5
-Revises: 79ce5ffc810e
-Create Date: 2022-03-06 12:02:17.603267
+Revision ID: aed3f5071dea
+Revises: 
+Create Date: 2022-03-06 14:30:15.556645
 
 """
 from alembic import op
@@ -10,8 +10,8 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '9efd93936ed5'
-down_revision = '79ce5ffc810e'
+revision = 'aed3f5071dea'
+down_revision = None
 branch_labels = None
 depends_on = None
 

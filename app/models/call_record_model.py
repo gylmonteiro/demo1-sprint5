@@ -1,5 +1,5 @@
 from app.configs.database import db
-from sqlalchemy import Column, Integer, String, Date, DateTime
+from sqlalchemy import Column, Integer, String, DateTime
 from dataclasses import dataclass
 
 @dataclass
